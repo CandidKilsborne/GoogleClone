@@ -1,8 +1,8 @@
 #wrapper {
 	height: 100%;
 	width: 100%;
-	max-width: 1000px;
-	min-width: 400px;
+	max-width: 1280px;
+	min-width: 320px;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -34,14 +34,23 @@ nav {
 }
 
 nav ul li {
-	display: inline;
+	display: inline-block;
 	float: right;
 	margin-top: 2%;
 	margin-bottom: 1%;
-	padding: 0px 10px 2px 10px;
+	margin-right: 15px;
+	padding: 0px 13px 2px 10px;
 	font-family: arial, sans-serif;
 	font-weight: lighter;
 	font-size: .9em;
+	position: relative;
+	right: 
+}
+
+nav img {
+	margin-top: 1%;
+	height: 15px;
+	width: 15px;
 }
 
 nav a:hover {
@@ -51,7 +60,7 @@ nav a:hover {
 
 /* Logo */
 
-img {
+#googleLogo {
 	display: block;
 	position: relative;
 	margin: 12% auto 3%;
@@ -65,8 +74,13 @@ input {
 	position: relative;
 	display: block;
 	margin: 10px auto 10px;
-	width: 620px;
+	width: 70%;
 	height: 38px;
+}
+
+input#searchBox {
+	background: url('img/mic.png') no-repeat;
+	padding-right: 5px;
 }
 
 input:hover {
@@ -82,10 +96,11 @@ input:hover {
 	width: 111px;
 	height: 33px;
 	display: inline-block;
-	/*margin-left: 515px;
-	margin-right: 25px;*/
 	margin: 5px auto 5px auto;
 	left: 40%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 .button1:hover {
@@ -104,6 +119,9 @@ input:hover {
 	height: 33px;
 	margin: 5px auto 5px auto;
 	left: 40%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 
@@ -140,3 +158,50 @@ footer ul li {
 	float: right;
 }
 
+@media screen and (max-width: 450px) {
+
+	nav {
+	  position: absolute;
+	  top: 1em;
+	  right: 1em;
+	  width: 2em;
+	  height: .5em;
+	  border-top: 1em double #000;
+	  border-bottom: 1em double #000;
+	  background-color: rgba(238, 238, 238, 1.0);
+	}
+	nav ul {
+		display: none;
+	}
+	nav ul li {
+		display: none;
+	}
+	#googleLogo {
+		margin-top: 20%;
+	}
+	.button1 {
+		position: absolute;
+		display: block;
+		margin: 5px auto;
+		top: 45%;
+	}
+	.button2 {
+		position: absolute;
+		display: block;
+		margin: 5px auto;
+		right: 155px;
+		top: 53%;
+	}
+	footer {
+		position: fixed;
+		background-image: url('img/settings.png'); 
+		background-position: center;
+		background-repeat: no-repeat;
+		/*padding: 5px auto;*/
+
+
+	}
+	footer ul li {
+		display: none;
+	}
+}
